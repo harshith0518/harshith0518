@@ -8,7 +8,7 @@
 
 [![Email](https://img.shields.io/badge/Email-bsharshith1808%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:bsharshith1808@gmail.com)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-harshith--balla-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/harshith-balla)
-[![Portfolio](https://img.shields.io/badge/Portfolio-visit-111111?style=for-the-badge&logo=vercel&logoColor=white)](https://github.com/harshith0518/portfolio-website)
+[![Portfolio](https://img.shields.io/badge/Portfolio-visit-111111?style=for-the-badge&logo=vercel&logoColor=white)](https://portfolio-website-8tj6.vercel.app/)
 [![Codeforces](https://img.shields.io/badge/Codeforces-Harshith-1F8ACB?style=for-the-badge&logo=codeforces&logoColor=white)](https://codeforces.com/profile/Harshith)
 
 </div>
