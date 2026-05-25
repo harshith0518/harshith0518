@@ -78,11 +78,18 @@ DevOps      Docker, AWS, Git
 
 </div>
 
-| GitHub Stats | Top Languages |
-| --- | --- |
-| ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=harshith0518&show_icons=true&theme=tokyonight&hide_border=true&rank_icon=github) | ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=harshith0518&layout=compact&theme=tokyonight&hide_border=true&langs_count=8) |
 
-![GitHub Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=harshith0518&theme=tokyo-night&hide_border=true&area=true)
+## Contribution Trail
+
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/harshith0518/harshith0518/output/github-contribution-grid-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/harshith0518/harshith0518/output/github-contribution-grid-snake.svg" />
+  <img alt="GitHub contribution snake animation" src="https://raw.githubusercontent.com/harshith0518/harshith0518/output/github-contribution-grid-snake.svg" />
+</picture>
+
+</div>
 
 ---
 
