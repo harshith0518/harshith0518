@@ -76,16 +76,13 @@ DevOps      Docker, AWS, Git
 
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&pause=900&color=39D353&center=true&vCenter=true&width=650&lines=status%3A+building+in+public;status%3A+learning+systems+from+the+inside;status%3A+shipping+small%2C+useful+things" alt="Animated GitHub status" />
 
-<br />
-
-<img height="155" src="https://github-readme-stats.vercel.app/api?username=harshith0518&show_icons=true&theme=transparent&hide_border=true&rank_icon=github" alt="GitHub stats" />
-<img height="155" src="https://github-readme-stats.vercel.app/api/top-langs/?username=harshith0518&layout=compact&theme=transparent&hide_border=true" alt="Top languages" />
-
-<br />
-
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=harshith0518&theme=github-compact&hide_border=true&area=true" alt="GitHub activity graph" />
-
 </div>
+
+| GitHub Stats | Top Languages |
+| --- | --- |
+| ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=harshith0518&show_icons=true&theme=tokyonight&hide_border=true&rank_icon=github) | ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=harshith0518&layout=compact&theme=tokyonight&hide_border=true&langs_count=8) |
+
+![GitHub Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=harshith0518&theme=tokyo-night&hide_border=true&area=true)
 
 ---
 
