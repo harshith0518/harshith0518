@@ -1,18 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&family=IBM+Plex+Mono:wght@400;500;600&family=Newsreader:opsz,wght@6..72,300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,700&family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&family=IBM+Plex+Mono:wght@400;500;600&family=Newsreader:opsz,wght@6..72,300;400;500&display=swap');
 @import "tailwindcss";
 
 :root {
-  --paper: #eeeadd;
-  --paper-raised: #f8f4e9;
-  --ink: #171912;
-  --muted: #65675d;
-  --line: rgba(23, 25, 18, 0.18);
-  --line-strong: rgba(23, 25, 18, 0.38);
-  --acid: #d9ff63;
-  --orange: #ff633e;
-  --blue: #5368ff;
-  --green: #0a705b;
-  --shadow: 0 26px 70px rgba(47, 45, 33, 0.14);
+  --spider-red: #c4172c;
+  --spider-blue: #1558b0;
+  --spider-navy: #071a33;
+  --spider-white: #f7f9fc;
+  --comic-yellow: #ffd24a;
+  --paper: #f4f1e8;
+  --paper-raised: #fffdf7;
+  --ink: #09182d;
+  --muted: #536277;
+  --line: rgba(9, 24, 45, 0.17);
+  --line-strong: rgba(9, 24, 45, 0.42);
+  --acid: var(--comic-yellow);
+  --orange: var(--spider-red);
+  --blue: var(--spider-blue);
+  --green: #1979a9;
+  --web-line: rgba(21, 88, 176, 0.15);
+  --shadow: 7px 9px 0 rgba(7, 26, 51, 0.14), 0 26px 60px rgba(7, 26, 51, 0.13);
   --page-progress: 0;
   --pointer-x: 0;
   --pointer-y: 0;
@@ -24,14 +30,18 @@
 }
 
 .dark {
-  --paper: #11120e;
-  --paper-raised: #1a1c16;
-  --ink: #f1efdf;
-  --muted: #a5a69a;
-  --line: rgba(241, 239, 223, 0.16);
-  --line-strong: rgba(241, 239, 223, 0.34);
-  --green: #6fe5c2;
-  --shadow: 0 28px 80px rgba(0, 0, 0, 0.28);
+  --spider-red: #ff4654;
+  --spider-blue: #4c8ff2;
+  --spider-navy: #030b16;
+  --paper: #06101f;
+  --paper-raised: #0c1d35;
+  --ink: #f4f7fb;
+  --muted: #aab9cb;
+  --line: rgba(244, 247, 251, 0.17);
+  --line-strong: rgba(244, 247, 251, 0.39);
+  --green: #74c5ff;
+  --web-line: rgba(76, 143, 242, 0.17);
+  --shadow: 7px 9px 0 rgba(0, 0, 0, 0.34), 0 28px 70px rgba(0, 0, 0, 0.3);
 }
 
 * {
@@ -1763,6 +1773,332 @@ button {
 .footer-links sup {
   margin-left: 2px;
   color: var(--orange);
+}
+
+/* Spider-Man branch: an original red/blue webbed engineering notebook. */
+::selection {
+  color: var(--spider-navy);
+  background: var(--comic-yellow);
+}
+
+:focus-visible {
+  outline: 3px solid var(--comic-yellow);
+  outline-offset: 4px;
+}
+
+.motion-grid {
+  opacity: 0.38;
+  background:
+    repeating-radial-gradient(
+      circle at 82% 13%,
+      transparent 0 68px,
+      var(--web-line) 69px 70px
+    ),
+    repeating-conic-gradient(
+      from -5deg at 82% 13%,
+      transparent 0 14deg,
+      var(--web-line) 14deg 15deg
+    );
+  background-size: auto;
+  mask-image: radial-gradient(circle at 82% 13%, #000 0 42%, transparent 72%);
+}
+
+.wordmark,
+.nav-links {
+  color: var(--spider-white);
+  border-color: rgba(247, 249, 252, 0.2);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.1), transparent 45%),
+    rgba(7, 26, 51, 0.88);
+  box-shadow: 0 16px 42px rgba(7, 26, 51, 0.25), inset 0 1px rgba(255, 255, 255, 0.16);
+}
+
+.nav-links::before {
+  position: absolute;
+  top: 0;
+  left: 13px;
+  right: 13px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--spider-red), var(--spider-blue));
+  content: "";
+}
+
+.wordmark-mark {
+  color: var(--spider-white);
+  background: var(--spider-red);
+  box-shadow: 3px 3px 0 var(--spider-blue);
+}
+
+.wordmark-copy strong {
+  color: var(--spider-white);
+}
+
+.wordmark-copy small,
+.nav-links > a {
+  color: rgba(247, 249, 252, 0.68);
+}
+
+.nav-links > a sup {
+  color: var(--comic-yellow);
+}
+
+.nav-links > a:hover,
+.nav-links > a.is-active {
+  color: var(--spider-white);
+  background: color-mix(in srgb, var(--spider-red) 42%, transparent);
+}
+
+.nav-signal i {
+  background: var(--spider-red);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--comic-yellow) 28%, transparent);
+}
+
+.theme-toggle {
+  color: var(--spider-white);
+  border-color: rgba(247, 249, 252, 0.24);
+}
+
+.hero h1,
+.section-heading h2,
+.skills-intro h2,
+.experience-header h3,
+.featured-project h3,
+.connect-inner h2 {
+  font-family: "Barlow Condensed", "Arial Narrow", sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.035em;
+}
+
+.hero h1 em,
+.section-heading h2 em,
+.connect-inner h2 em {
+  color: var(--spider-red);
+  font-family: "Barlow Condensed", "Arial Narrow", sans-serif;
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: -0.035em;
+}
+
+.button-primary {
+  color: var(--spider-white);
+  border-color: var(--spider-navy);
+  background: var(--spider-red);
+  box-shadow: 5px 5px 0 var(--spider-navy);
+}
+
+.button-primary:hover {
+  box-shadow: 2px 2px 0 var(--spider-navy);
+}
+
+.systems-playground {
+  --play-accent: var(--spider-blue);
+  color: var(--spider-white);
+  border-color: rgba(247, 249, 252, 0.18);
+  background:
+    radial-gradient(
+      circle at calc(50% + var(--field-x) * 10%) calc(45% + var(--field-y) * 8%),
+      color-mix(in srgb, var(--play-accent) 20%, transparent),
+      transparent 35%
+    ),
+    var(--spider-navy);
+  box-shadow: 11px 13px 0 var(--spider-red);
+}
+
+.systems-playground.mode-1 { --play-accent: var(--spider-red); }
+.systems-playground.mode-2 { --play-accent: var(--comic-yellow); }
+
+.system-node {
+  color: var(--spider-white);
+  border-color: rgba(247, 249, 252, 0.28);
+  background: rgba(7, 26, 51, 0.9);
+}
+
+.system-core {
+  color: var(--spider-white);
+}
+
+.systems-playground.mode-2 .system-core {
+  color: var(--spider-navy);
+}
+
+.ticker {
+  color: var(--spider-white);
+  border-color: var(--spider-navy);
+  background: var(--spider-red);
+}
+
+.ticker-track i {
+  color: var(--comic-yellow);
+}
+
+.experience-card {
+  border: 2px solid var(--spider-navy);
+  border-radius: 20px 20px 20px 5px;
+  background-image: radial-gradient(rgba(247, 249, 252, 0.1) 0.75px, transparent 0.9px);
+  background-size: 8px 8px;
+  box-shadow: var(--shadow);
+}
+
+.experience-1,
+.experience-2,
+.experience-3 {
+  color: var(--spider-white);
+}
+
+.experience-1 { background-color: #0b294b; }
+.experience-2 { background-color: #1558b0; }
+.experience-3 { background-color: #c4172c; }
+
+.experience-company,
+.experience-2 .experience-company,
+.experience-3 .experience-company {
+  color: var(--comic-yellow);
+  opacity: 1;
+}
+
+.card-number {
+  color: transparent;
+  opacity: 1;
+  -webkit-text-stroke: 1px rgba(247, 249, 252, 0.32);
+}
+
+.featured-project {
+  color: var(--spider-white);
+  border: 2px solid color-mix(in srgb, var(--spider-blue) 62%, var(--spider-navy));
+  background:
+    radial-gradient(circle at 86% 10%, rgba(21, 88, 176, 0.25), transparent 31%),
+    linear-gradient(rgba(247, 249, 252, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(247, 249, 252, 0.04) 1px, transparent 1px),
+    var(--spider-navy);
+  background-size: auto, 32px 32px, 32px 32px;
+  box-shadow: var(--shadow);
+}
+
+.project-meta {
+  color: var(--comic-yellow);
+}
+
+.network-toy {
+  border-color: rgba(247, 249, 252, 0.28);
+}
+
+.network-nodes circle {
+  stroke: var(--spider-navy);
+}
+
+.network-nodes circle.is-infected {
+  fill: var(--spider-red);
+  stroke: var(--comic-yellow);
+  filter: drop-shadow(0 0 7px rgba(196, 23, 44, 0.75));
+}
+
+.network-toy button {
+  color: var(--spider-white);
+  background: var(--spider-red);
+}
+
+.network-toy button:hover {
+  background: color-mix(in srgb, var(--spider-red) 82%, black);
+}
+
+.skill-group-title > span {
+  color: var(--spider-red);
+  border: 2px solid var(--spider-red);
+}
+
+.skill-group-title h3,
+.interest-row h3,
+.achievement-card strong,
+.contact-launch {
+  font-family: "Barlow Condensed", "Arial Narrow", sans-serif;
+}
+
+.skill-item {
+  border-color: var(--line);
+  background: color-mix(in srgb, var(--paper-raised) 88%, transparent);
+}
+
+.skill-item svg {
+  color: var(--spider-blue);
+}
+
+.skill-item:hover {
+  border-color: var(--spider-red);
+}
+
+.achievement-card {
+  border: 2px solid var(--spider-navy);
+  border-radius: 14px 14px 14px 4px;
+  background: var(--paper-raised);
+  box-shadow: 4px 5px 0 color-mix(in srgb, var(--spider-blue) 72%, transparent);
+}
+
+.achievement-card:nth-child(even) {
+  box-shadow: 4px 5px 0 color-mix(in srgb, var(--spider-red) 72%, transparent);
+}
+
+.achievement-card strong {
+  color: var(--spider-red);
+  font-weight: 700;
+}
+
+.education-card {
+  border: 2px solid var(--spider-navy);
+}
+
+.education-orbit {
+  border-color: var(--spider-blue);
+}
+
+.education-orbit::before {
+  border-color: var(--spider-red);
+}
+
+.education-orbit::after {
+  border-color: var(--comic-yellow);
+}
+
+.card-label {
+  color: var(--spider-blue);
+}
+
+.interest-row::before {
+  background: var(--spider-red);
+}
+
+.interest-row:hover,
+.interest-row:hover p {
+  color: var(--spider-white);
+}
+
+.interest-row:hover > span {
+  color: var(--comic-yellow);
+}
+
+.connect-section {
+  color: var(--spider-white);
+  background: var(--spider-navy);
+}
+
+.footer-orbit {
+  border-color: color-mix(in srgb, var(--spider-blue) 72%, transparent);
+}
+
+.footer-orbit::before {
+  border-color: color-mix(in srgb, var(--spider-red) 72%, transparent);
+}
+
+.footer-orbit::after {
+  border-color: color-mix(in srgb, var(--comic-yellow) 58%, transparent);
+}
+
+.footer-orbit > span {
+  background: var(--spider-red);
+  box-shadow: 0 0 100px color-mix(in srgb, var(--spider-red) 30%, transparent);
+}
+
+.footer-links sup {
+  color: var(--comic-yellow);
 }
 
 @media (max-width: 980px) {

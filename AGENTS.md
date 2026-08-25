@@ -51,8 +51,8 @@ This is the handoff note for agents and contributors working in this repository.
 
 ## Design and interaction model
 
-- The visual language is a systems field guide: warm paper, dark ink, acid green, orange, and electric blue.
-- Type roles are deliberate: Bricolage Grotesque for the main voice, Newsreader for editorial accents, and IBM Plex Mono for labels and metadata.
+- On the `spiderman` branch, the visual language is a webbed engineering notebook: original red/blue/navy comic-panel treatments, subtle web geometry, and no copied character art or official Marvel marks.
+- Type roles are deliberate: Bricolage Grotesque for the main voice, Barlow Condensed for high-impact headings, Newsreader for selected editorial details, and IBM Plex Mono for labels and metadata.
 - Experience cards use restrained sticky stacking on desktop. The independent project stays as one interactive card, and experience cards return to normal document flow on narrow screens or when reduced motion is requested.
 - Diagrams inside experience cards are static. The hero playground and project network are the two intentional play areas.
 - `MotionField.tsx` owns global scroll progress and reveal behavior. Avoid adding another scroll manager or replacing native scrolling.
