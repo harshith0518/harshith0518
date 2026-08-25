@@ -32,12 +32,10 @@ import RooftopTransition from './Elements/RooftopTransition'
 
 const experience = [
   {
-    brand: 'nvidia',
-    mark: 'NV',
     company: 'NVIDIA',
-    website: 'https://www.nvidia.com/',
     role: 'System Software Engineer Summer Intern',
     period: 'May — Jul 2026',
+    link: 'https://github.com/NVIDIA/NVSentinel',
     signal: 'observe',
     lead: 'Made GPU workloads less invisible.',
     summary: 'Prototyped workload observability for NVSentinel across B100, H100, and A100 clusters.',
@@ -49,12 +47,10 @@ const experience = [
     tools: ['Go', 'eBPF', 'CUDA', 'Kubernetes', 'Prometheus'],
   },
   {
-    brand: 'internhire',
-    mark: 'IH',
-    company: 'InternHire',
-    website: 'https://www.internhire.in/',
+    company: 'Internhire',
     role: 'Software Engineering Co-op',
     period: 'Feb — Mar 2026',
+    link: 'https://internhire.in/',
     signal: 'ship',
     lead: 'Worked where product met infrastructure.',
     summary: 'Joined an IIT Madras alumni-founded startup as one of its early engineering interns.',
@@ -65,13 +61,10 @@ const experience = [
     tools: ['Next.js', 'PostgreSQL', 'Docker'],
   },
   {
-    brand: 'algouniversity',
-    mark: 'AU',
-    company: 'AlgoUniversity',
-    badge: 'YC S21',
-    website: 'https://www.algouniversity.com/',
+    company: 'AlgoUniversity · YC S21',
     role: 'Software Engineering Co-op',
     period: 'Jun — Jul 2025',
+    link: 'https://github.com/harshith0518/WebDev-project-',
     signal: 'judge',
     lead: 'Built the judge, not just the interface.',
     summary: 'Created the core workflows of a competitive-programming platform from execution to leaderboard.',
@@ -155,47 +148,28 @@ const skillGroups = [
 const Work = () => (
   <section id="work" className="content-section section-frame work-section">
     <div className="section-heading split-heading" data-reveal>
-      <p className="eyebrow">Work experience</p>
-      <h2>Companies I have worked with.</h2>
-      <p>The teams come first. Then the role, the systems, and what I contributed.</p>
+      <p className="eyebrow">01 / field work</p>
+      <h2>Work experience.</h2>
+      <p>What I have worked on so far.</p>
     </div>
 
     <div className="experience-stack">
       {experience.map((item, index) => (
-        <article
-          className={`experience-card experience-${index + 1}`}
-          data-company={item.brand}
-          key={item.company}
-          data-reveal
-        >
+        <article className={`experience-card experience-${index + 1}`} key={item.company} data-reveal>
+          <div className="card-number">0{index + 1}</div>
           <header className="experience-header">
-            <div className="experience-identity">
-              <div className="experience-company-lockup">
-                <span className="experience-company-mark" aria-hidden="true">
-                  {item.brand === 'nvidia' ? <SiNvidia /> : item.mark}
-                </span>
-                <h3 className="experience-company-title">
-                  <a
-                    className="experience-company-link"
-                    href={item.website}
-                    target="_blank"
-                    rel="noreferrer"
-                    aria-label={`Visit ${item.company}'s official website`}
-                  >
-                    <span>{item.company}</span>
-                    <ArrowUpRight aria-hidden="true" size={24} />
-                  </a>
-                </h3>
-                {'badge' in item && item.badge ? <span className="experience-company-badge">{item.badge}</span> : null}
-              </div>
-              <p className="experience-role">{item.role}</p>
+            <div>
+              <p className="experience-company">{item.company}</p>
+              <h3>{item.lead}</h3>
             </div>
-            <p className="experience-period">{item.period}</p>
+            <div className="experience-meta">
+              <span>{item.role}</span>
+              <span>{item.period}</span>
+            </div>
           </header>
 
           <div className="experience-layout">
             <div className="experience-copy">
-              <p className="experience-lead">{item.lead}</p>
               <p className="experience-summary">{item.summary}</p>
               <ul>{item.details.map((detail) => <li key={detail}>{detail}</li>)}</ul>
             </div>
@@ -206,6 +180,9 @@ const Work = () => (
 
           <footer className="experience-footer">
             <div className="tag-row">{item.tools.map((tool) => <span key={tool}>{tool}</span>)}</div>
+            <a href={item.link} target="_blank" rel="noreferrer">
+              open field note <ArrowUpRight size={17} />
+            </a>
           </footer>
         </article>
       ))}
