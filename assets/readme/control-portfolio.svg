@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 196 44" role="img" aria-labelledby="title">
+  <title id="title">Open portfolio</title>
+  <style>
+    .signal { animation: pulse 2.4s ease-in-out infinite; }
+    .arrow { animation: nudge 2.4s ease-in-out infinite; }
+    @keyframes pulse { 50% { opacity: .35; } }
+    @keyframes nudge { 50% { transform: translateX(3px); } }
+    @media (prefers-reduced-motion: reduce) { .signal, .arrow { animation: none; } }
+  </style>
+  <rect x="1" y="1" width="194" height="42" rx="11" fill="#071a33" stroke="#ff4654" stroke-width="2"/>
+  <path d="M2 12Q2 2 12 2H18V42H12Q2 42 2 32Z" fill="#ff4654"/>
+  <circle class="signal" cx="31" cy="22" r="4" fill="#4c8ff2"/>
+  <text x="44" y="27" fill="#f7f9fc" font-family="ui-monospace,Consolas,monospace" font-size="13" font-weight="700" letter-spacing="1.2">OPEN PORTFOLIO</text>
+  <path class="arrow" d="M171 16L177 22 171 28M177 22H163" fill="none" stroke="#ff4654" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

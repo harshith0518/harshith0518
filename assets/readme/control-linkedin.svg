@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 146 44" role="img" aria-labelledby="title">
+  <title id="title">Open LinkedIn</title>
+  <style>
+    .signal { animation: pulse 3.1s ease-in-out infinite; }
+    @keyframes pulse { 50% { opacity: .35; } }
+    @media (prefers-reduced-motion: reduce) { .signal { animation: none; } }
+  </style>
+  <rect x="1" y="1" width="144" height="42" rx="11" fill="#071a33" stroke="#4c8ff2" stroke-width="2"/>
+  <rect class="signal" x="13" y="11" width="22" height="22" rx="5" fill="#1558b0"/>
+  <text x="24" y="27" text-anchor="middle" fill="#f7f9fc" font-family="Arial,sans-serif" font-size="13" font-weight="700">in</text>
+  <text x="45" y="27" fill="#f7f9fc" font-family="ui-monospace,Consolas,monospace" font-size="13" font-weight="700" letter-spacing="1.1">LINKEDIN</text>
+</svg>

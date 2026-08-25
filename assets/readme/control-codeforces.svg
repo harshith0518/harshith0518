@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 166 44" role="img" aria-labelledby="title">
+  <title id="title">Open Codeforces</title>
+  <style>
+    .signal { animation: pulse 2.6s ease-in-out infinite; transform-box: fill-box; transform-origin: bottom; }
+    .signal:last-of-type { animation-delay: .3s; }
+    @keyframes pulse { 50% { transform: scaleY(.55); } }
+    @media (prefers-reduced-motion: reduce) { .signal { animation: none; } }
+  </style>
+  <rect x="1" y="1" width="164" height="42" rx="11" fill="#071a33" stroke="#ff4654" stroke-width="2"/>
+  <rect class="signal" x="15" y="14" width="6" height="16" rx="2" fill="#ff4654"/>
+  <rect class="signal" x="24" y="10" width="6" height="20" rx="2" fill="#4c8ff2"/>
+  <text x="41" y="27" fill="#f7f9fc" font-family="ui-monospace,Consolas,monospace" font-size="12.5" font-weight="700" letter-spacing=".9">CODEFORCES</text>
+</svg>

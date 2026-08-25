@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 44" role="img" aria-labelledby="title">
+  <title id="title">Send email</title>
+  <style>
+    .signal { animation: pulse 2.8s ease-in-out infinite; }
+    @keyframes pulse { 50% { opacity: .32; } }
+    @media (prefers-reduced-motion: reduce) { .signal { animation: none; } }
+  </style>
+  <rect x="1" y="1" width="124" height="42" rx="11" fill="#071a33" stroke="#4c8ff2" stroke-width="2"/>
+  <circle class="signal" cx="23" cy="22" r="11" fill="#1558b0"/>
+  <text x="23" y="27" text-anchor="middle" fill="#f7f9fc" font-family="Arial,sans-serif" font-size="15" font-weight="700">@</text>
+  <text x="43" y="27" fill="#f7f9fc" font-family="ui-monospace,Consolas,monospace" font-size="13" font-weight="700" letter-spacing="1.2">EMAIL</text>
+</svg>

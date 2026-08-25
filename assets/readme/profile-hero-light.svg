@@ -1,7 +1,25 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
   <title id="title">Surya Harshith Balla profile artwork</title>
-  <desc id="desc">An abstract paper city, engineering grid, and red-blue signal path.</desc>
+  <desc id="desc">An abstract paper city, engineering grid, and animated red-blue signal path.</desc>
   <defs>
+    <style>
+      .route-flow { stroke-dasharray: 26 18; animation: route-flow 7s linear infinite; }
+      .route-node { transform-box: fill-box; transform-origin: center; animation: node-pulse 4.2s ease-in-out infinite; }
+      .route-node:nth-child(2) { animation-delay: .45s; }
+      .route-node:nth-child(3) { animation-delay: .9s; }
+      .route-node:nth-child(4) { animation-delay: 1.35s; }
+      .route-node:nth-child(5) { animation-delay: 1.8s; }
+      .signal-orbit { transform-box: fill-box; transform-origin: center; animation: signal-pulse 3.8s ease-in-out infinite; }
+      .city-windows { animation: city-signal 5.6s steps(1, end) infinite; }
+      @keyframes route-flow { to { stroke-dashoffset: -176; } }
+      @keyframes node-pulse { 0%, 68%, 100% { opacity: 1; transform: scale(1); } 78% { opacity: .42; transform: scale(.72); } }
+      @keyframes signal-pulse { 0%, 100% { opacity: .72; transform: scale(1); } 50% { opacity: .3; transform: scale(1.16); } }
+      @keyframes city-signal { 0%, 88%, 100% { opacity: .78; } 92% { opacity: .28; } 96% { opacity: 1; } }
+      @media (prefers-reduced-motion: reduce) {
+        .route-flow, .route-node, .signal-orbit, .city-windows { animation: none; }
+        .route-flow { stroke-dasharray: none; }
+      }
+    </style>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#fffdf7"/>
       <stop offset="0.58" stop-color="#f4f1e8"/>
@@ -42,14 +60,15 @@
     <g opacity="0.94">
       <path d="M0 309V260H68V218H130V276H192V238H255V194H322V285H387V225H451V251H519V181H580V286H648V234H710V267H782V210H850V281H918V233H985V188H1052V265H1122V220H1200V360H0Z" fill="#09182d"/>
       <g fill="#f4f1e8" fill-opacity="0.32">
-        <path d="M82 238h7v7h-7zM105 238h7v7h-7zM270 219h8v8h-8zM294 219h8v8h-8zM402 246h8v8h-8zM535 207h8v8h-8zM559 207h8v8h-8zM797 233h8v8h-8zM821 233h8v8h-8zM1002 213h8v8h-8zM1026 213h8v8h-8zM1140 242h8v8h-8z"/>
+        <path class="city-windows" d="M82 238h7v7h-7zM105 238h7v7h-7zM270 219h8v8h-8zM294 219h8v8h-8zM402 246h8v8h-8zM535 207h8v8h-8zM559 207h8v8h-8zM797 233h8v8h-8zM821 233h8v8h-8zM1002 213h8v8h-8zM1026 213h8v8h-8zM1140 242h8v8h-8z"/>
       </g>
     </g>
 
     <path d="M80 266C190 198 282 315 391 243S583 180 681 246 855 296 960 187 1090 156 1160 116" fill="none" stroke="#fffdf7" stroke-opacity="0.9" stroke-width="9"/>
-    <path d="M80 266C190 198 282 315 391 243S583 180 681 246 855 296 960 187 1090 156 1160 116" fill="none" stroke="url(#route)" stroke-width="3.5" filter="url(#glow)"/>
+    <path d="M80 266C190 198 282 315 391 243S583 180 681 246 855 296 960 187 1090 156 1160 116" fill="none" stroke="url(#route)" stroke-width="2.5" stroke-opacity="0.5"/>
+    <path class="route-flow" d="M80 266C190 198 282 315 391 243S583 180 681 246 855 296 960 187 1090 156 1160 116" fill="none" stroke="url(#route)" stroke-width="3.5" filter="url(#glow)"/>
     <g fill="#fffdf7" stroke="#09182d" stroke-width="3">
-      <circle cx="80" cy="266" r="7"/><circle cx="391" cy="243" r="7"/><circle cx="681" cy="246" r="7"/><circle cx="960" cy="187" r="7"/><circle cx="1160" cy="116" r="7"/>
+      <circle class="route-node" cx="80" cy="266" r="7"/><circle class="route-node" cx="391" cy="243" r="7"/><circle class="route-node" cx="681" cy="246" r="7"/><circle class="route-node" cx="960" cy="187" r="7"/><circle class="route-node" cx="1160" cy="116" r="7"/>
     </g>
 
     <g font-family="ui-monospace, SFMono-Regular, Consolas, monospace" fill="#536277">
@@ -64,7 +83,7 @@
 
     <g transform="translate(1032 73)">
       <circle r="37" fill="#fffdf7" stroke="#1558b0" stroke-width="2"/>
-      <circle r="27" fill="none" stroke="#c4172c" stroke-opacity="0.72"/>
+      <circle class="signal-orbit" r="27" fill="none" stroke="#c4172c" stroke-opacity="0.72"/>
       <text x="0" y="8" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="800" fill="#09182d">SH</text>
     </g>
 
