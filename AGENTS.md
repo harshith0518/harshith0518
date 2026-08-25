@@ -13,6 +13,7 @@ This is the handoff note for agents and contributors working in this repository.
 ```text
 1-portfolio/
 ├─ AGENTS.md                        # this handoff guide
+├─ CHANGELOG.md                     # human-readable registry of major Git milestones
 ├─ README.md                        # repository notes
 └─ my-website/
    ├─ index.html                    # document metadata and app mount
@@ -28,7 +29,7 @@ This is the handoff note for agents and contributors working in this repository.
    │  └─ components/
    │     ├─ Navbar.tsx              # glass navigation and active-section state
    │     ├─ Home.tsx                # hero, introduction, and ticker
-   │     ├─ Work.tsx                # experience, project, ranks, and skills
+   │     ├─ Work.tsx                # company-led experience, project, ranks, and skills
    │     ├─ About.tsx               # education and interests
    │     ├─ Connect.tsx             # email CTA and profile links
    │     └─ Elements/
@@ -57,6 +58,7 @@ This is the handoff note for agents and contributors working in this repository.
 
 - On the `spiderman` branch, the visual language is a cinematic webbed engineering notebook: red/blue/navy city scenes, web geometry, and an original code-native comic-style masked hero rig. Do not copy movie stills, actor likenesses, studio artwork, toy branding, comic panels, or official Marvel marks.
 - Type roles are deliberate: Bricolage Grotesque for the main voice, Barlow Condensed for high-impact headings, Newsreader for selected editorial details, and IBM Plex Mono for labels and metadata.
+- Experience cards lead with the employer name as the card heading. That heading is the official company-site link; the role and contribution copy are deliberately secondary. Brand accents are semantic (`data-company`) while the shared dark webbed shell keeps the section aligned with the overall theme.
 - Experience cards use restrained sticky stacking on desktop. The independent project stays as one interactive card, and experience cards return to normal document flow on narrow screens or when reduced motion is requested.
 - Diagrams inside experience cards are static. The hero city, project network, and short rooftop route are the intentional motion moments; keep reading-heavy cards calm.
 - The hero uses two original AI-generated city environment plates (desktop and portrait) with a restrained grade and haze. Keep the city clean: the only hero web overlay is the short transition drawn when the focus button is clicked. Keep the images decorative (`alt=""`) and keep meaningful descriptions in HTML.
@@ -78,7 +80,7 @@ This is the handoff note for agents and contributors working in this repository.
 
 - Preserve semantic sections, headings, lists, buttons, and links.
 - Interactive visuals must remain keyboard operable and include an accessible label or visible instruction.
-- External links open in a new tab with `rel="noreferrer"`; email links do not need a new tab.
+- External links open in a new tab with `rel="noreferrer"`; email links do not need a new tab. In experience cards, keep the official website on the company heading instead of adding a separate generic company link.
 - Keep focus styles visible, color contrast legible in both themes, and decorative elements hidden from assistive technology.
 - Do not reintroduce the CGPA unless the user explicitly asks for it.
 
@@ -98,7 +100,7 @@ Open `http://127.0.0.1:5173/` for local review. Before handing off a visual chan
 
 1. Run the production build and fix all TypeScript/Vite errors.
 2. Check the opening view at desktop width for collisions around the navigation, hero copy, footnote, and playground.
-3. Scroll through every sticky experience card, then test the independent project and ranks block directly below it.
+3. Scroll through every sticky experience card, verify each company-heading link and brand treatment, then test the independent project and ranks block directly below it.
 4. Check a mobile-sized viewport; cards must use normal flow and no content should overflow horizontally.
 5. Test light/dark theme, the hero controls, the network toy, the email CTA, and external links.
 6. Check the browser console for errors.
