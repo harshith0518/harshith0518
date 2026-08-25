@@ -1,59 +1,66 @@
-import { useTheme } from "../contexts/ThemeContext";
-import { smoothScroll } from "../utils/SmoothScroll";
-import ThemeButton from "./Elements/ThemeButton";
+import { useEffect, useState } from 'react'
+import { Moon, Sun } from 'lucide-react'
+import { useTheme } from '../contexts/ThemeContext'
+
+const links = [
+  { label: 'Work', index: '01', href: '#work' },
+  { label: 'About', index: '02', href: '#about' },
+  { label: 'Contact', index: '03', href: '#connect' },
+]
 
 const Navbar = () => {
-    const {theme} = useTheme();
-    return (<>
-        <div className = "flex justify-between items-center fixed top-0 left-0 w-full z-20">
-            {/* <img
-            src={logo}
-            alt="logo"
-            className={`w-10 h-10 rounded-full hover:shadow-2xl ${theme !== "dark"?"hover:shadow-zinc-950":"hover:shadow-gray-200"} ml-10 `}
-            /> */}
-            <div className={`ml-140 cursor-pointer my-10 rounded-2xl m-5 border border-neutral-600
-                relative overflow-hidden
-                backdrop-blur-[2px] px-5 py-2
-                transition-all duration-300 ease-out
-                hover:scale-[1.03]
-                active:scale-[0.98]
-                focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/40
-                ${
-                theme === 'dark'
-                ? `bg-neutral-400/20 text-neutral-300 hover:bg-neutral-400/30 shadow-lg shadow-black/10`
-                : `bg-neutral-300/20 text-neutral-700 hover:bg-neutral-300/30 shadow-lg shadow-neutral-400/20`
-                }
-                `}>
-                
-                <nav className="flex gap-10">
-                    {[
-                        { label: "Home", ref: "home" },
-                        { label: "Work", ref: "work" },
-                        { label: "About", ref: "about" },
-                        { label: "Connect", ref: "connect" },
-                    ].map((item) => (
-                        <a
-                        key={item.ref}
-                        href={"#"+item.ref}
-                        onClick={() => smoothScroll(item.ref, 500)}
-                        className="relative px-2 py-1 text-sm font-medium
-                        transition-all duration-300
-                        hover:tracking-wide
-                        after:absolute after:left-0 after:-bottom-1
-                        after:h-[2px] after:w-full after:origin-left
-                        after:scale-x-0 after:bg-current
-                        after:transition-transform after:duration-300
-                        hover:after:scale-x-100"
-                        >
-                            {item.label}
-                        </a>
-                    ))}
-                    </nav>
-                </div>
-            <ThemeButton/>
+  const { theme, toggleTheme } = useTheme()
+  const [active, setActive] = useState('home')
+
+  useEffect(() => {
+    const sections = ['home', 'work', 'about', 'connect']
+      .map((id) => document.getElementById(id))
+      .filter(Boolean) as HTMLElement[]
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0]
+        if (visible?.target.id) setActive(visible.target.id)
+      },
+      { rootMargin: '-25% 0px -60% 0px', threshold: [0, 0.25, 0.6] },
+    )
+
+    sections.forEach((section) => observer.observe(section))
+    return () => observer.disconnect()
+  }, [])
+
+  return (
+    <header className="nav-wrap">
+      <nav className="nav-bar" aria-label="Primary navigation">
+        <a className="wordmark" href="#home" aria-label="Surya Harshith Balla, home">
+          <span className="wordmark-mark">SH</span>
+          <span className="wordmark-copy">
+            <strong>Harshith</strong>
+            <small>CS @ IIT Madras</small>
+          </span>
+        </a>
+
+        <div className="nav-links" aria-label="Section links">
+          <span className="nav-signal" aria-hidden="true"><i /></span>
+          {links.map((link) => (
+            <a className={active === link.href.slice(1) ? 'is-active' : ''} key={link.href} href={link.href}>
+              <sup>{link.index}</sup>{link.label}
+            </a>
+          ))}
+          <button
+            className="theme-toggle"
+            type="button"
+            onClick={toggleTheme}
+            aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
+          >
+            {theme === 'dark' ? <Sun size={16} /> : <Moon size={16} />}
+          </button>
         </div>
-    </>)
-};
+      </nav>
+    </header>
+  )
+}
 
-
-export default Navbar;
+export default Navbar

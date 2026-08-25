@@ -1,82 +1,76 @@
-import BlurText from "./Elements/BlurText";
-import bradPitt from "../assets/brad-pitt.png";
-import PixelTransition from "./Elements/PixelTranslation";
-import { useTheme } from "../contexts/ThemeContext";
-import ShinyText from "./Elements/ShinyText";
-import SplitText from "./Elements/SplitText";
+import { useEffect, useState } from 'react'
+import { ArrowDownRight, ArrowUpRight } from 'lucide-react'
+import SystemsPlayground from './Elements/SystemsPlayground'
+
+const tickerItems = ['GPU observability', 'core software', 'system design', 'agents + networks', 'AI/ML + robotics']
+const rotatingDescriptors = ['software engineer', 'backend & infrastructure', 'AI/ML + robotics']
 
 const Home = () => {
+  const [descriptorIndex, setDescriptorIndex] = useState(0)
 
-    const {theme} = useTheme();
+  useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
 
-    return <div id = "home" className="flex justify-center m-20">
-        <PixelTransition
-        firstContent={
-            <img
-            src={bradPitt}
-            alt="Profile"
-            style={{ width: "100%", height: "100%", objectFit: "cover" }}
-            />
-        }
-        secondContent={
-            <div
-            style={{
-                width: "100%",
-                height: "100%",
-                display: "grid",
-                placeItems: "center",
-                backgroundColor: `${theme === "dark"?"#09090b":"#e5e7eb"}`
-            }}
-            >
-            <p style={{ fontWeight: 900, fontSize: "3rem", color: `${theme !== "dark"?"#09090b":"#e5e7eb"}` }}>Harshith</p>
-            </div>
-        }
-        gridSize={12}
-        pixelColor={`${theme ==="dark"?"#09090b":"#e5e7eb"}`}
-        once={false}
-        animationStepDuration={0.4}
-        className="custom-pixel-card m-8"
-        />
-        <div className="flex flex-col justify-center ">
-        <ShinyText
-            text="🖳 Software Developer |✨ AI Enthusiast |🧑‍💻 Freelancer"
-            speed={2}
-            delay={0}
-            color={`${theme === "dark"?"#d1d5db":"#09090b"}`}
-            shineColor={`${theme === "dark"?"#4b5563":"#d1d5db"}`}
-            spread={120}
-            direction="left"
-            yoyo={false}
-            pauseOnHover={false}
-            />
-        <BlurText
-            text="Hi,I am Harshith"
-            delay={150}
-            animateBy="words"
-            direction="top"
-            className="text-7xl font-semibold mb-1 "
-        />
-        <div className="font-semibold mb-2">
-                    Penultimate CSE Undergrad @ IIT Madras
-                </div>
-        <span className="w-136">
-                <SplitText
-                    text="My interests primarily revolve around systems, algorithms, and software engineering. My work includes backend-intensive web platforms and AI/ML problem-solving, and I actively welcome technically challenging opportunities driven by problem depth and my personal curiosity rather than alignment with my tech stack."
-                    className="text-md font-light mt-4"
-                    delay={10}
-                    duration={0.13}
-                    ease="power3.out"
-                    splitType="chars"
-                    from={{ opacity: 0, y: 40 }}
-                    to={{ opacity: 1, y: 0 }}
-                    threshold={0.1}
-                    rootMargin="-100px"
-                />
-                
-        </span>
+    const timer = window.setInterval(() => {
+      setDescriptorIndex((current) => (current + 1) % rotatingDescriptors.length)
+    }, 3000)
+
+    return () => window.clearInterval(timer)
+  }, [])
+
+  return (
+    <>
+      <section id="home" className="hero section-frame">
+        <div className="hero-copy" data-reveal>
+          <p className="eyebrow hero-kicker">
+            <span>Surya Harshith Balla</span>
+            <span className="kicker-separator" aria-hidden="true">/</span>
+            <span className="rotating-kicker" key={rotatingDescriptors[descriptorIndex]} aria-hidden="true">
+              {rotatingDescriptors[descriptorIndex]}
+            </span>
+            <span className="sr-only">Software engineer interested in backend, infrastructure, AI, machine learning, and robotics.</span>
+          </p>
+          <h1>
+            <span>I like building</span>
+            <em>useful software.</em>
+          </h1>
+          <p className="hero-intro">
+            I’m a Computer Science student at IIT Madras, with experience in GPU
+            observability, backend engineering, and deployment systems. I’m also
+            exploring AI/ML, computer vision, and robotics.
+          </p>
+
+          <div className="hero-actions">
+            <a className="button button-primary magnetic-link" href="#work">
+              View my work <ArrowDownRight size={17} />
+            </a>
+            <a className="text-link" href="mailto:bsharshith1808@gmail.com">
+              Say hello <ArrowUpRight size={16} />
+            </a>
+          </div>
+
+          <div className="hero-footnote">
+            <span>IIT Madras · CSE ’27</span>
+            <span>Chennai, India</span>
+            <span className="available"><i /> open to opportunities</span>
+          </div>
         </div>
-    </div>
-};
 
+        <div className="hero-playground" data-reveal>
+          <SystemsPlayground />
+        </div>
 
-export default Home;
+      </section>
+
+      <div className="ticker" aria-label={tickerItems.join(', ')}>
+        <div className="ticker-track" aria-hidden="true">
+          {[...tickerItems, ...tickerItems].map((item, index) => (
+            <span key={`${item}-${index}`}><i>✳</i>{item}</span>
+          ))}
+        </div>
+      </div>
+    </>
+  )
+}
+
+export default Home
