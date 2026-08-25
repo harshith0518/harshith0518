@@ -4,12 +4,12 @@ This is the human-readable registry of the portfolio's significant milestones. G
 
 ## 2026-08-26
 
-### Company-first work experience — `319d127`
+### Experience-card hierarchy correction — `911be76`
 
-- Promoted NVIDIA, InternHire, and AlgoUniversity to the primary heading of each experience card.
-- Linked every company label directly to its verified official website.
-- Added cohesive employer accents: NVIDIA graphite and green, InternHire deep navy and electric blue, and AlgoUniversity deep navy and warm orange.
-- Removed the oversized card numbers and generic field-note links so the employer, role, and contribution hierarchy stays clear.
+- Reverted the over-branded card experiment from `319d127` in `6a7d8f6` after visual review.
+- Restored the original sticky panels, colors, card numbers, diagrams, spacing, and field-note footer.
+- Promoted each company name to the first linked heading, followed by the work headline and then the detailed description.
+- Linked NVIDIA, Internhire, and AlgoUniversity directly to their verified official websites without adding company-specific card decoration.
 
 ### Cinematic interaction pass — `5da47c0`
 
