@@ -33,6 +33,7 @@ import RooftopTransition from './Elements/RooftopTransition'
 const experience = [
   {
     company: 'NVIDIA',
+    companyUrl: 'https://www.nvidia.com/',
     role: 'System Software Engineer Summer Intern',
     period: 'May — Jul 2026',
     link: 'https://github.com/NVIDIA/NVSentinel',
@@ -48,6 +49,7 @@ const experience = [
   },
   {
     company: 'Internhire',
+    companyUrl: 'https://www.internhire.in/',
     role: 'Software Engineering Co-op',
     period: 'Feb — Mar 2026',
     link: 'https://internhire.in/',
@@ -62,6 +64,7 @@ const experience = [
   },
   {
     company: 'AlgoUniversity · YC S21',
+    companyUrl: 'https://www.algouniversity.com/',
     role: 'Software Engineering Co-op',
     period: 'Jun — Jul 2025',
     link: 'https://github.com/harshith0518/WebDev-project-',
@@ -159,8 +162,18 @@ const Work = () => (
           <div className="card-number">0{index + 1}</div>
           <header className="experience-header">
             <div>
-              <p className="experience-company">{item.company}</p>
-              <h3>{item.lead}</h3>
+              <h3 className="experience-company">
+                <a
+                  href={item.companyUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={`Visit ${item.company}'s official website`}
+                >
+                  <span>{item.company}</span>
+                  <ArrowUpRight aria-hidden="true" size={22} />
+                </a>
+              </h3>
+              <p className="experience-lead">{item.lead}</p>
             </div>
             <div className="experience-meta">
               <span>{item.role}</span>
