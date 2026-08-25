@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+  <title id="title">Surya Harshith Balla profile artwork</title>
+  <desc id="desc">An abstract night city, engineering grid, and red-blue signal path.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#030914"/>
+      <stop offset="0.55" stop-color="#071a33"/>
+      <stop offset="1" stop-color="#0b2344"/>
+    </linearGradient>
+    <linearGradient id="route" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ff4654"/>
+      <stop offset="0.52" stop-color="#f7f9fc"/>
+      <stop offset="1" stop-color="#4c8ff2"/>
+    </linearGradient>
+    <radialGradient id="signalGlow">
+      <stop offset="0" stop-color="#4c8ff2" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#4c8ff2" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse">
+      <path d="M36 0H0V36" fill="none" stroke="#4c8ff2" stroke-opacity="0.08"/>
+    </pattern>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="frame"><rect width="1200" height="360" rx="28"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#frame)">
+    <rect width="1200" height="360" fill="url(#bg)"/>
+    <rect width="1200" height="360" fill="url(#grid)"/>
+    <circle cx="1030" cy="74" r="260" fill="url(#signalGlow)"/>
+
+    <g fill="none" stroke="#f7f9fc" stroke-opacity="0.11">
+      <path d="M940-20A155 155 0 0 1 1095 135"/>
+      <path d="M902-20A198 198 0 0 1 1100 178"/>
+      <path d="M864-20A242 242 0 0 1 1106 222"/>
+      <path d="M826-20A286 286 0 0 1 1112 266"/>
+      <path d="M1032 73L870-8M1032 73L1186 10M1032 73L1196 116M1032 73L1132 262"/>
+    </g>
+
+    <g opacity="0.88">
+      <path d="M0 309V260H68V218H130V276H192V238H255V194H322V285H387V225H451V251H519V181H580V286H648V234H710V267H782V210H850V281H918V233H985V188H1052V265H1122V220H1200V360H0Z" fill="#020711"/>
+      <g fill="#4c8ff2" fill-opacity="0.22">
+        <path d="M82 238h7v7h-7zM105 238h7v7h-7zM270 219h8v8h-8zM294 219h8v8h-8zM402 246h8v8h-8zM535 207h8v8h-8zM559 207h8v8h-8zM797 233h8v8h-8zM821 233h8v8h-8zM1002 213h8v8h-8zM1026 213h8v8h-8zM1140 242h8v8h-8z"/>
+      </g>
+    </g>
+
+    <path d="M80 266C190 198 282 315 391 243S583 180 681 246 855 296 960 187 1090 156 1160 116" fill="none" stroke="#030914" stroke-opacity="0.8" stroke-width="9"/>
+    <path d="M80 266C190 198 282 315 391 243S583 180 681 246 855 296 960 187 1090 156 1160 116" fill="none" stroke="url(#route)" stroke-width="3.5" filter="url(#glow)"/>
+    <g fill="#f7f9fc" stroke="#071a33" stroke-width="3">
+      <circle cx="80" cy="266" r="7"/><circle cx="391" cy="243" r="7"/><circle cx="681" cy="246" r="7"/><circle cx="960" cy="187" r="7"/><circle cx="1160" cy="116" r="7"/>
+    </g>
+
+    <g font-family="ui-monospace, SFMono-Regular, Consolas, monospace" fill="#aab9cb">
+      <text x="72" y="67" font-size="14" letter-spacing="3">PROFILE / 2026</text>
+      <text x="72" y="95" font-size="12" letter-spacing="2">SYSTEMS · SOFTWARE · AI</text>
+    </g>
+
+    <g font-family="Arial, Helvetica, sans-serif" font-weight="800">
+      <text x="68" y="175" font-size="76" letter-spacing="-4" fill="#f7f9fc">BUILD</text>
+      <text x="68" y="227" font-size="31" letter-spacing="8" fill="#ff4654">TRACE / UNDERSTAND</text>
+    </g>
+
+    <g transform="translate(1032 73)">
+      <circle r="37" fill="#030914" stroke="#4c8ff2" stroke-width="2"/>
+      <circle r="27" fill="none" stroke="#ff4654" stroke-opacity="0.72"/>
+      <text x="0" y="8" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="800" fill="#f7f9fc">SH</text>
+    </g>
+
+    <text x="1128" y="332" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="12" letter-spacing="2" fill="#aab9cb">IIT MADRAS / CS ’27</text>
+  </g>
+</svg>

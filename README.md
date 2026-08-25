@@ -1,90 +1,97 @@
-<div align="center">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/readme/profile-hero-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/readme/profile-hero-light.svg">
+  <img src="./assets/readme/profile-hero-light.svg" width="100%" alt="">
+</picture>
 
-# Balla Surya Harshith
+<h1 align="center">Surya Harshith Balla</h1>
 
-### CSE @ IIT Madras | NVIDIA SSE Intern | Full-stack + systems learner
+<p align="center">
+  <strong>I like building useful software.</strong><br>
+  IIT Madras CS ’27 · backend, infrastructure, GPU observability, and AI/ML
+</p>
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&pause=900&color=2F81F7&center=true&vCenter=true&width=820&lines=College+undergrad+exploring+tech%2C+systems%2C+and+life.;Building+where+backend%2C+ML%2C+and+low-level+ideas+meet.;Curious+mind.+Clean+code.+Hard+problems." alt="Typing intro" />
-
-[![Email](https://img.shields.io/badge/Email-bsharshith1808%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:bsharshith1808@gmail.com)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-harshith--balla-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/harshith-balla)
-[![Portfolio](https://img.shields.io/badge/Portfolio-visit-111111?style=for-the-badge&logo=vercel&logoColor=white)](https://portfolio-website-8tj6.vercel.app/)
-[![Codeforces](https://img.shields.io/badge/Codeforces-Harshith-1F8ACB?style=for-the-badge&logo=codeforces&logoColor=white)](https://codeforces.com/profile/Harshith)
-
-</div>
-
----
-
-## About
-
-I am a CSE undergrad at IIT Madras, currently exploring the space where software engineering, systems, ML, and real-world curiosity collide.
-
-- NVIDIA SSE Intern.
-- SWE Co-op Intern at AlgoUniversity, backed by Y Combinator.
-- AIR 580 in JEE Advanced 2023 and AIR 342 in JEE Main 2023.
-- Codeforces max rating: 1359.
-
----
-
-## Work I Care About
-
-**Online Judge System**  
-Built a Django + React + Docker platform with auth, problem APIs, submissions, evaluation, and leaderboard flows.
-
-**Complex Systems Research**  
-Simulated SIR spread in an urban-like environment and explored structural emergence using Python, PySINDy, NumPy, and Matplotlib.
-
-**Sports Face Recognition**  
-Built an OpenCV + Scikit-learn classifier using PCA and image preprocessing across 200+ images.
+<p align="center">
+  <strong><a href="https://portfolio-website-8tj6.vercel.app/">Portfolio ↗</a></strong>
+  &nbsp;·&nbsp;
+  <a href="mailto:bsharshith1808@gmail.com">Email</a>
+  &nbsp;·&nbsp;
+  <a href="https://www.linkedin.com/in/harshith-balla-355199299">LinkedIn</a>
+  &nbsp;·&nbsp;
+  <a href="https://github.com/harshith0518?tab=repositories">Repositories</a>
+  &nbsp;·&nbsp;
+  <a href="https://codeforces.com/profile/Harshith7946">Codeforces</a>
+</p>
 
 ---
 
-## Skills
+## About me
 
-<div align="center">
+I am a Computer Science student at IIT Madras. I enjoy backend, infrastructure, and systems problems—understanding what went wrong, finding the mechanism behind it, and building a practical fix.
 
-![C](https://img.shields.io/badge/C-A8B9CC?style=flat-square&logo=c&logoColor=111111)
-![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=flat-square&logo=cplusplus&logoColor=white)
-![Go](https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=111111)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=111111)
-![Django](https://img.shields.io/badge/Django-092E20?style=flat-square&logo=django&logoColor=white)
-![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=111111)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
-![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
-![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonaws&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
+My work so far has taken me through GPU observability, full-stack products, deployment systems, code-execution pipelines, and agent-based simulations. I am also exploring computer vision, reinforcement learning, AI systems, robotics, and autonomous systems.
 
-</div>
+## Experience
 
-```txt
-Systems     C, C++, Go, Linux
-Backend     Django, Node.js, Express.js, PostgreSQL, Redis
-Frontend    React.js, TailwindCSS, HTML, CSS
-ML/Data     NumPy, Pandas, Matplotlib, Scikit-learn, OpenCV, PySINDy
-DevOps      Docker, AWS, Git
-```
+> ### [NVIDIA](https://www.nvidia.com/)
+> **System Software Engineer Summer Intern** · May–Jul 2026
+>
+> Prototyped Go/eBPF workload monitoring for [NVSentinel](https://github.com/NVIDIA/NVSentinel), capturing CUDA Runtime API activity across B100, H100, and A100 GPU clusters. Deployed node-wide collection as a Kubernetes DaemonSet, connected DCGM telemetry to Prometheus and Grafana, and reproduced failure patterns to validate remediation workflows.
+>
+> `Go` `eBPF` `CUDA` `Kubernetes` `DCGM` `Prometheus` `Grafana`
 
----
+> ### [Internhire](https://www.internhire.in/)
+> **Software Engineering Co-op** · Feb–Mar 2026
+>
+> Joined an IIT Madras alumni-founded startup as one of its early engineering interns. Contributed across backend and frontend development and built CI/CD pipelines for deployments on self-hosted infrastructure.
+>
+> `Next.js` `PostgreSQL` `Docker` `CI/CD`
 
-## GitHub Status
+> ### [AlgoUniversity · YC S21](https://www.algouniversity.com/)
+> **Software Engineering Co-op** · Jun–Jul 2025
+>
+> Built an end-to-end online judge with a custom code-execution pipeline, JWT-authenticated APIs, automated evaluation, submissions, and leaderboards. Containerized the services and connected Vercel and Amazon S3 for delivery and storage.
+>
+> `Django` `React` `Docker` `AWS` `PostgreSQL` · [View the project →](https://github.com/harshith0518/WebDev-project-)
 
-<div align="center">
+## Selected project
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&pause=900&color=39D353&center=true&vCenter=true&width=650&lines=status%3A+building+in+public;status%3A+learning+systems+from+the+inside;status%3A+shipping+small%2C+useful+things" alt="Animated GitHub status" />
-<br />
+### [Agent-Based Analysis of Epidemic Dynamics](https://portfolio-website-8tj6.vercel.app/#work)
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=harshith0518&theme=github-compact&hide_border=true&area=true" alt="GitHub activity graph" />
+**Course project under Prof. Danny Raj** · Jan–May 2025
 
-</div>
+Built an agent-based SIR simulation with core-periphery structure, stochastic mobility, proximity-based transmission, and time-varying NetworkX contact graphs. Analysed segregation and modularity, then used PySINDy to identify candidate governing equations evaluated with R² and MAPE.
 
----
+`Python` `NetworkX` `NumPy` `PySINDy` `Matplotlib`
 
-<div align="center">
+## Technical toolkit
 
-`curious by default` `systems in progress` `build, measure, refine`
+**Languages** — Python · C · C++ · Go · TypeScript<br>
+**Backend & systems** — Linux · eBPF · Django · Node.js · PostgreSQL · Redis<br>
+**Cloud & observability** — AWS · Docker · Kubernetes · Prometheus · Grafana<br>
+**Frontend** — React · Tailwind CSS · HTML · CSS<br>
+**AI/ML & data** — CUDA · DCGM · NetworkX · scikit-learn · pandas · NumPy · Matplotlib
 
-</div>
+## Foundations
+
+Operating systems · computer networks · compiler design · databases · algorithms · computer architecture · machine learning · graph theory · probability and statistics
+
+## A few proof points
+
+- **AIR 342** in JEE Main 2023, among nearly 1.1 million candidates.
+- **AIR 580** in JEE Advanced 2023, among nearly 160,000 candidates.
+- **Rank 99** in TS EAPCET 2023, among nearly 200,000 candidates.
+- **1362** maximum Codeforces rating as [Harshith7946](https://codeforces.com/profile/Harshith7946).
+- Selected among **50 participants from 1,700+ applicants** for the AlgoUniversity Accelerator Camp.
+
+## Away from the editor
+
+I enjoy sketching and fitness—two different ways of staying patient with repetition and detail.
+
+## Let’s talk
+
+If you are working on an interesting software, systems, infrastructure, or AI problem, [send me an email](mailto:bsharshith1808@gmail.com?subject=GitHub%20conversation). I am always happy to understand a good problem and see where I can help.
+
+<p align="center">
+  <sub>build · trace · understand · improve</sub>
+</p>
