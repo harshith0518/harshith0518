@@ -32,6 +32,17 @@ const NetworkToy = () => {
         <span>{infected.size} active {infected.size === 1 ? 'node' : 'nodes'}</span>
       </div>
       <svg viewBox="0 0 380 310" role="img" aria-label={`Interactive contact network with ${infected.size} highlighted nodes`}>
+        <g className="network-web" aria-hidden="true">
+          <ellipse cx="190" cy="158" rx="52" ry="44" />
+          <ellipse cx="190" cy="158" rx="104" ry="88" />
+          <ellipse cx="190" cy="158" rx="154" ry="130" />
+          <line x1="190" y1="158" x2="190" y2="26" />
+          <line x1="190" y1="158" x2="344" y2="77" />
+          <line x1="190" y1="158" x2="344" y2="240" />
+          <line x1="190" y1="158" x2="190" y2="290" />
+          <line x1="190" y1="158" x2="36" y2="240" />
+          <line x1="190" y1="158" x2="36" y2="77" />
+        </g>
         <g className="network-edges">
           {edges.map(([from, to]) => (
             <line key={`${from}-${to}`} x1={nodes[from][0]} y1={nodes[from][1]} x2={nodes[to][0]} y2={nodes[to][1]} />

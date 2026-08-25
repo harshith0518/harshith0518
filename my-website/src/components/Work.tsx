@@ -28,6 +28,7 @@ import {
 import { PiNetworkX } from 'react-icons/pi'
 import { VscGraph } from 'react-icons/vsc'
 import NetworkToy from './Elements/NetworkToy'
+import RooftopTransition from './Elements/RooftopTransition'
 
 const experience = [
   {
@@ -224,6 +225,8 @@ const Work = () => (
         </a>
       </div>
     </div>
+
+    <RooftopTransition />
 
     <div className="skills-block" data-reveal>
       <div className="skills-intro">

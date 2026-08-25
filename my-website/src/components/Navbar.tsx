@@ -3,9 +3,9 @@ import { Moon, Sun } from 'lucide-react'
 import { useTheme } from '../contexts/ThemeContext'
 
 const links = [
-  { label: 'Work', index: '01', href: '#work' },
-  { label: 'About', index: '02', href: '#about' },
-  { label: 'Contact', index: '03', href: '#connect' },
+  { label: 'Work', href: '#work' },
+  { label: 'About', href: '#about' },
+  { label: 'Contact', href: '#connect' },
 ]
 
 const Navbar = () => {
@@ -34,21 +34,38 @@ const Navbar = () => {
   return (
     <header className="nav-wrap">
       <nav className="nav-bar" aria-label="Primary navigation">
-        <a className="wordmark" href="#home" aria-label="Surya Harshith Balla, home">
-          <span className="wordmark-mark">SH</span>
+        <a
+          className={`wordmark nav-plate ${active === 'home' ? 'is-active' : ''}`}
+          href="#home"
+          aria-label="Surya Harshith Balla, home"
+          aria-current={active === 'home' ? 'location' : undefined}
+        >
+          <span className="wordmark-mark" aria-hidden="true">SH</span>
           <span className="wordmark-copy">
-            <strong>Harshith</strong>
-            <small>CS @ IIT Madras</small>
+            <strong>Harshith Balla</strong>
+            <small>CS · IIT Madras</small>
           </span>
         </a>
 
-        <div className="nav-links" aria-label="Section links">
-          <span className="nav-signal" aria-hidden="true"><i /></span>
-          {links.map((link) => (
-            <a className={active === link.href.slice(1) ? 'is-active' : ''} key={link.href} href={link.href}>
-              <sup>{link.index}</sup>{link.label}
-            </a>
-          ))}
+        <div className="nav-console nav-plate">
+          <div className="nav-links" data-active={active} aria-label="Section links">
+            {links.map((link) => {
+              const isActive = active === link.href.slice(1)
+
+              return (
+                <a
+                  className={isActive ? 'is-active' : ''}
+                  key={link.href}
+                  href={link.href}
+                  aria-current={isActive ? 'location' : undefined}
+                >
+                  {link.label}
+                </a>
+              )
+            })}
+            <span className="nav-active-rail" aria-hidden="true" />
+          </div>
+          <span className="nav-divider" aria-hidden="true" />
           <button
             className="theme-toggle"
             type="button"
