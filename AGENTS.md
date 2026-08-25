@@ -17,7 +17,8 @@ This is the handoff note for agents and contributors working in this repository.
 └─ my-website/
    ├─ index.html                    # document metadata and app mount
    ├─ public/
-   │  └─ favicon.svg                # site icon
+   │  ├─ favicon.svg                # site icon
+   │  └─ cinematic-city-{wide,mobile}.{png,webp} # generated masters + optimized runtime plates
    ├─ src/
    │  ├─ App.tsx                    # section order and top-level shell
    │  ├─ App.css                    # tokens, layout, motion, responsive rules
@@ -31,8 +32,11 @@ This is the handoff note for agents and contributors working in this repository.
    │     ├─ About.tsx               # education and interests
    │     ├─ Connect.tsx             # email CTA and profile links
    │     └─ Elements/
-   │        ├─ MotionField.tsx       # scroll progress, reveals, ambient shapes
-   │        ├─ SystemsPlayground.tsx # interactive hero visual
+   │        ├─ MotionField.tsx       # scroll progress, reveals, web route, character route
+   │        ├─ ScrollSpidey.tsx      # recovered four-pose smooth SVG character rig
+   │        ├─ SystemsPlayground.tsx # interactive hero visual and topic modes
+   │        ├─ CinematicCityScene.tsx # generated city plate + SVG web/light layers
+   │        ├─ RooftopTransition.tsx # project-to-toolkit SVG route and process copy
    │        └─ NetworkToy.tsx        # clickable epidemic-network visual
    ├─ package.json                  # scripts and dependencies
    └─ vite.config.ts                # Vite configuration
@@ -51,11 +55,15 @@ This is the handoff note for agents and contributors working in this repository.
 
 ## Design and interaction model
 
-- On the `spiderman` branch, the visual language is a webbed engineering notebook: original red/blue/navy comic-panel treatments, subtle web geometry, and no copied character art or official Marvel marks.
+- On the `spiderman` branch, the visual language is a cinematic webbed engineering notebook: red/blue/navy city scenes, web geometry, and an original code-native comic-style masked hero rig. Do not copy movie stills, actor likenesses, studio artwork, toy branding, comic panels, or official Marvel marks.
 - Type roles are deliberate: Bricolage Grotesque for the main voice, Barlow Condensed for high-impact headings, Newsreader for selected editorial details, and IBM Plex Mono for labels and metadata.
 - Experience cards use restrained sticky stacking on desktop. The independent project stays as one interactive card, and experience cards return to normal document flow on narrow screens or when reduced motion is requested.
-- Diagrams inside experience cards are static. The hero playground and project network are the two intentional play areas.
-- `MotionField.tsx` owns global scroll progress and reveal behavior. Avoid adding another scroll manager or replacing native scrolling.
+- Diagrams inside experience cards are static. The hero city, project network, and short rooftop route are the intentional motion moments; keep reading-heavy cards calm.
+- The hero uses two original AI-generated city environment plates (desktop and portrait) with a restrained grade and haze. Keep the city clean: the only hero web overlay is the short transition drawn when the focus button is clicked. Keep the images decorative (`alt=""`) and keep meaningful descriptions in HTML.
+- `MotionField.tsx` owns global scroll progress, reveal behavior, the hero camera variables, and the route for `ScrollSpidey.tsx`. The recovered pre-LEGO rig has four original chapters—swing, wall-crawl, web-strike, and landing. Near the end, the unchanged landing body triggers the added spider-sense overlay and then drops below the viewport. There is intentionally no moving city pocket behind the character. Avoid adding another scroll manager or replacing native scrolling.
+- The navigation is intentionally split into a compact brand plate and navigation console on desktop, then merged into one masthead on mobile. Preserve the moving active rail, 42–44px touch targets, and one-time entrance motion.
+- The hero focus control moves between three positions as modes change. Keep the button mounted so keyboard focus is preserved; its keyed inner face replays after the click-drawn web reaches the next position.
+- The footer uses an abstract animated web-signal aperture, not a character badge or logo. Keep its motion subtle, responsive, and static under `prefers-reduced-motion`.
 - Keep animation subtle and purposeful. Do not add a custom cursor, scroll hijacking, heavy WebGL, or continuous motion to reading-heavy cards unless the user specifically asks for it.
 
 ## CSS conventions
