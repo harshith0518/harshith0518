@@ -12,7 +12,7 @@
 </p>
 
 <p align="center">
-  <a href="https://spidey-harshith.vercel.app/"><img src="./assets/readme/control-portfolio.svg" height="40" alt="Open portfolio"></a>
+  <a href="https://spidey-harshithportfolio.vercel.app/"><img src="./assets/readme/control-portfolio.svg" height="40" alt="Open portfolio"></a>
   <a href="mailto:bsharshith1808@gmail.com"><img src="./assets/readme/control-email.svg" height="40" alt="Send email"></a>
   <a href="https://www.linkedin.com/in/harshith-balla-355199299"><img src="./assets/readme/control-linkedin.svg" height="40" alt="Open LinkedIn"></a>
   <a href="https://codeforces.com/profile/Harshith7946"><img src="./assets/readme/control-codeforces.svg" height="40" alt="Open Codeforces"></a>
@@ -95,7 +95,7 @@ off-screen         → sketching / fitness
 
 ## Selected project
 
-### [Agent-Based Analysis of Epidemic Dynamics](https://spidey-harshith.vercel.app/#work)
+### [Agent-Based Analysis of Epidemic Dynamics](https://spidey-harshithportfolio.vercel.app/#work)
 
 **Course project under Prof. Danny Raj** · Jan–May 2025
 
@@ -140,7 +140,7 @@ Operating systems · computer networks · compiler design · databases · algori
 If you are working on an interesting software, systems, infrastructure, or AI problem, [send me an email](mailto:bsharshith1808@gmail.com?subject=GitHub%20conversation). I am always happy to understand a good problem and see where I can help.
 
 <p align="center">
-  <a href="https://spidey-harshith.vercel.app/"><strong>enter the portfolio ↗</strong></a>
+  <a href="https://spidey-harshithportfolio.vercel.app/"><strong>enter the portfolio ↗</strong></a>
   &nbsp;·&nbsp;
   <a href="#surya-harshith-balla">replay from the top ↑</a>
 </p>
